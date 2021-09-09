@@ -37,7 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'first'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'first.pagination_class.PersonalizedPagination',
+    'PAGE_SIZE': 10,
+    'page_size_query_param': True
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
