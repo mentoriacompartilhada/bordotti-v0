@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/mentoriacompartilhada/manage.py",
+            "args": [
+                "runserver",
+                "0.0.0.0:8888"
+            ],
+            "django": true
+        },
+        {
+            "name": "Python: Django Migration",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/mentoriacompartilhada/manage.py",
+            "args": [
+                "migrate"
+            ],
+            "django": true
+        }
+    ]
+}

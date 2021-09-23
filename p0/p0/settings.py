@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'first.pagination_class.PersonalizedPagination',
+    'DEFAULT_PAGINATION_CLASS': 'first.pagination_class.CanadianPagination',
     'PAGE_SIZE': 10,
     'page_size_query_param': True
 }
