@@ -5,15 +5,16 @@ from rest_framework.generics import GenericAPIView
 
 from sys import exc_info
 
+# from local_model import Local_model
 
 class CreateModelMixin:
     """
     Create a model instance.
     """
     def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
+        serializer = self.get_serializer(data=request.data) 
         serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
+        self.perform_create(serializer) # precisa mudar o formato
         headers = self.get_success_headers(serializer.data)
         return Response(None, status=status.HTTP_201_CREATED, headers=headers)
 
